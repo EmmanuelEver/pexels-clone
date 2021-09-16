@@ -1,0 +1,30 @@
+.wrapper{
+    padding: 1.2rem;
+    color: #5e5e5e;
+
+    & > a{
+        font-size: 1.075rem;
+        font-weight: 600;
+        line-height: 1.2rem;
+        color: inherit;
+    }
+
+    &.active {
+        position: relative;
+        color: #0064f9;
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            border-bottom: 4px solid #0064f9;
+        }
+    }
+
+    &:hover {
+        color: #0064f9;
+    }
+}

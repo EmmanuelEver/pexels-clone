@@ -1,0 +1,31 @@
+@import "mixins.module";
+
+.searchTabs{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include tablet {
+        justify-content: space-between;
+    }
+
+}
+.searchTabs__button {
+    margin-bottom: 1rem;
+    & small {
+        font-size: 14px;
+        font-weight: 500;
+        margin-left: .4rem;
+        color: #9e9e9e;
+    }
+    &.activeSearchTab{
+        box-shadow: 0 0 0 1px #0064f9;
+        color:#0064f9;
+        fill:#0064f9;
+        border-color:#0064f9;
+    }
+}
+.searchTabs__button:not(:last-of-type) {
+    margin-right: .5rem;
+}

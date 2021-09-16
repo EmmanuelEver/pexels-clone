@@ -1,0 +1,120 @@
+@import './variables.module';
+@import './templates.module';
+@import './mixins.module';
+
+.nav{
+    height: 75px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 30;
+    background: #232a34;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.15rem;
+    transition: background .15s ease;
+
+    &.default {
+        position: static;
+    }
+
+    & > .searchBar {
+        flex: 1;
+        margin: 0 1rem;
+        display: none;
+        position: relative;
+
+        &.navChange {
+            display: block;
+        }
+        &.default{
+            display: block;
+        }
+    }
+    
+
+    & > ul {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        list-style: none;
+
+        & > li {
+            font-size: 1.15rem;
+            margin-right: 2.15rem;
+            color: $textWhite;
+            
+            & > .navLink {
+                display: none;
+            
+                @include tablet(){
+                    display: block;
+                }
+            }
+
+            & > .avatar{
+                @include avatar();
+                display: none;
+            
+                @include bigPhone(){
+                    display: block;
+                }
+            }
+
+            & > .navButton{
+                display: none;
+            
+                @include bigPhone(){
+                    display: block;
+                }
+            }
+        }
+    }
+
+    & > .menu{
+        display: block;
+
+        @include tablet(){
+            display: none;
+        }
+
+        & > button{
+            display: block;
+            border: none;
+            outline: none;
+            background: transparent;
+
+            & > svg {
+                fill: #fff;
+            }
+        }
+    }
+
+    & > .logo{
+        display: flex;
+        align-items: center;
+
+        & > span {
+            margin-left: 1rem;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: $textWhite;
+            display: none;
+            
+            @include bigPhone(){
+                    display: block;
+                }
+        }
+    }
+
+    &.homepage {
+        background: transparent;
+
+        &.navChange {
+            background: #232a34;
+        }
+    } 
+}

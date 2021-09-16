@@ -1,0 +1,59 @@
+@import "mixins.module";
+
+.collections {
+    margin-top: 2.25rem;
+    & h3 {
+        font-size: 1.8rem;
+        line-height: 1.2;
+        font-weight: 700;
+        margin-top: 0;
+        letter-spacing: -1px;
+        margin-bottom: 0;
+        margin-bottom: 20px;
+        color: #1a1a1a;
+        padding: 0 20px;
+
+        @include tablet{
+            padding: 0 100px;
+        }
+
+        @include desktop{
+            padding: 0 150px;
+        }
+    }
+    &__items{
+        overflow-x: auto;
+
+        &__wrapper {
+            min-width:800px;
+            display: flex;
+            margin-top: 1rem;
+        }
+
+        @include tablet{
+            padding: 0 100px;
+        }
+
+        @include desktop{
+            padding: 0 150px;
+        }
+    }
+
+    &__tags{
+        overflow-x: auto;
+
+        &__wrapper{
+            padding:0 20px;
+            display:flex;
+            flex-wrap: nowrap;
+            overflow:visible;
+
+            @include tablet{
+                padding: 0 100px;
+            }
+            @include desktop{
+                padding: 0 150px;
+            }
+        }
+    }
+}

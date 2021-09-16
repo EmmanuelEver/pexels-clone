@@ -1,0 +1,25 @@
+@import "mixins.module";
+
+.title{
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    @include tablet {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 2rem;
+        padding-bottom: .5rem;
+    }
+
+    & h1 {
+        font-size: 26px;
+        line-height: 1.2;
+        font-weight: 800;
+        margin-top: 0;
+        margin-bottom: 0;
+        text-transform: capitalize;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+}

@@ -1,0 +1,54 @@
+@import '../styles/mixins.module';
+
+.wrapper{
+    width: 100%;
+}
+.mainContent {
+    width: 100%;
+    padding: 0 1.75rem;
+
+    & > .mainContent__header {
+        padding:  .8rem 0 .4rem;
+
+        & > h2 {
+            font-size: 1.15rem;
+            line-height: 1.6rem;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+    }
+
+    & > .mainContent__body {
+        height: 100vh;
+    }
+}
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    & > .photoColumn{
+        flex-basis: 0;
+        flex-grow: 1;
+        display: block;
+        margin-right: 1.45rem;
+        width: 50%;
+
+        &:last-of-type{
+            margin-right: 0;
+        }
+
+        & > .gridItem{
+            margin-bottom: 1.45rem;
+        }
+    }
+
+    // & > .gridItem {
+    //     width: 25%;
+    //     display: block;
+    // }
+    // & > .gridItem img {
+    //     width: 100%;
+    //     object-fit: cover;
+    // }
+}

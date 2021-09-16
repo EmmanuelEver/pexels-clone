@@ -1,0 +1,118 @@
+@import '../styles/variables.module';
+.hero{
+    position: relative;
+    height: 500px;
+    background-color: #d3d3d3;
+    width: 100%;
+    padding: 4.5rem 2rem 4rem;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: -webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,0.2)),to(rgba(0,0,0,0.2))),-webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,0.2)),to(transparent));
+        background: linear-gradient(
+    180deg
+    ,rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.2) 100%),linear-gradient(
+    180deg
+    ,rgba(0,0,0,0.2) 0%,transparent 100%);
+        z-index: 2;
+    }
+}
+.hero__background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+    & video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.hero__content{
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    max-width: 650px;
+    & > h1 {
+        font-size: 2.25rem;
+        line-height: 1.25;
+        color: $textWhite;
+        margin-bottom: 1rem;
+    }
+}
+.hero__footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 50px;
+    padding: 0 1rem;
+    
+    & > div > a {
+        font-size: .75rem;
+        font-weight: 300;
+        color: #fff;
+        opacity: .75;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+.suggestion{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: .5rem;
+    overflow-x: hidden;
+
+    & > h5 {
+        font-size: .9rem;
+        font-weight: 500;
+        color: $textWhite;
+        margin-right: .5rem;
+    }
+    & > ul {
+        list-style: none;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        overflow-x: auto;
+
+        & > li {
+            font-size: 14px;
+            line-height: 18px;
+            font-weight: 300;
+            margin-top: 0;
+            margin-bottom: 0;
+            display: inline-block;
+            margin-right: .25rem;
+            color: $textWhite;
+            opacity: .8;
+            cursor: pointer;
+            white-space: nowrap;
+
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+}

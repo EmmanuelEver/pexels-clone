@@ -1,0 +1,38 @@
+@mixin phone {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+@mixin bigPhone {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin bigDesktop {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}
+@mixin avatar {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 1.5px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+
+@mixin defaultPage {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 75px 0px;
+}

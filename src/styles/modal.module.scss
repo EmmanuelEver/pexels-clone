@@ -1,0 +1,42 @@
+.overlay{
+    position: fixed;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    z-index: 30;
+    background-color: rgba(12,15,19,.9);
+    display: grid;
+    place-items: center;
+    padding: 2rem 3rem;
+}
+
+.modalWrapper{
+    width: 100%;
+    max-width: 1000px;
+    padding: 1.5rem 0rem 0 3rem;
+    position: relative;
+    overflow-y: auto;
+    height: 100vh;
+}
+.modalClose{
+    position: absolute;
+    top: 1.3rem;
+    left: .25rem;
+    cursor: pointer;
+    & i {
+        width: 36px;
+        height:36px;
+        fill: #fff;
+
+        & svg {
+            width: 36px;
+            height: 36px;
+        }
+    }
+}
+.modal{
+    background-color: #fff;
+    padding: 2rem 2rem 3rem;
+    border-radius: 6px;
+}

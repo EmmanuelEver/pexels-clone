@@ -1,0 +1,25 @@
+.wrapper{
+    width: 100%;
+    padding: 1.25rem .9rem;
+    background: #fff;
+    border-top: 1px solid #e8e8e8;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.trendingTopics{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.searchTopicsTitle{
+    margin: .75rem 0;
+
+    & > span {
+        font-size: 14px;
+        line-height: 18px;
+        color: #1a1a1a;
+        font-weight: 400;
+    }
+}
