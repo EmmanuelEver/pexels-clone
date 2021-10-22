@@ -1,4 +1,4 @@
-import Tag from "../ui/Tag"
+import Tag from "../ui/tag"
 import style from "../../styles/collections.module.scss";
 import CollectionCard from "../ui/collectionCard";
 
