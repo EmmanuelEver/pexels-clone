@@ -37,10 +37,14 @@
     
 
     & > ul {
-        display: flex;
+        display: none;
         align-items: center;
         margin-left: auto;
         list-style: none;
+
+        @include tablet(){
+            display: flex;
+        }
 
         & > li {
             font-size: 1.15rem;
