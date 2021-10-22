@@ -1,17 +1,8 @@
-import { forwardRef, useEffect } from "react"
+import { forwardRef } from "react"
 import style from "../../styles/modal.module.scss"
 
-const pressESC = (e) => {
-    console.log(e)
-}
 
 const Modal = forwardRef((props, ref) => {
-    useEffect(() => {
-        window.addEventListener("keydown", pressESC)
-        return () => {
-            window.removeEventListener("keydown", pressESC)
-        }
-    }, []);
 
     return (
         <>

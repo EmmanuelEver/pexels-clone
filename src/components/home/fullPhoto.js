@@ -1,7 +1,7 @@
 import PhotoPage from "../photo/photoPage"
 import useSWR from 'swr'
 
-const fullPhoto = ({photoId}) => {
+const FullPhoto = ({photoId}) => {
     const fetcher = async () => {
         const resp = await fetch(`https://api.pexels.com/v1/photos/${photoId}`, { method: 'GET', headers : { Accept: 'application/json', Authorization: process.env.PEXEL_API }})
         const data = await resp.json();
@@ -20,4 +20,4 @@ const fullPhoto = ({photoId}) => {
     )
 }
 
-export default fullPhoto
+export default FullPhoto

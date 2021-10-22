@@ -42,7 +42,7 @@ const VideoPage = ({resource}) => {
             </div>
             <div className={style.photoPage__body}>
                 <div className={style.photoPage__body__mainFrame}>
-                    <video controls autoplay width={resource.width} height={resource.height} src={resource.video_files[0].link}>
+                    <video controls autoPlay width={resource.width} height={resource.height} src={resource.video_files[0].link}>
 
                     </video>
                 </div>
